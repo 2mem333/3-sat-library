@@ -39,11 +39,11 @@ public:
 	}
 	void sil(const int& sayi)
 	{
-		// Liste boşsa direkt çık
+		// Liste boÅŸsa direkt Ã§Ä±k
 		if (sonuncu == nullptr)
 			return;
 
-		// İlk eleman eşleşiyorsa onu sil
+		// Ä°lk eleman eÅŸleÅŸiyorsa onu sil
 		while (sonuncu != nullptr && sonuncu->deger == sayi)
 		{
 			_veriler* temp = sonuncu;
@@ -52,7 +52,7 @@ public:
 			toplam_veri_sayisi--;
 		}
 
-		// Diğer elemanları kontrol et
+		// DiÄŸer elemanlarÄ± kontrol et
 		_veriler* temp = sonuncu;
 		while (temp != nullptr && temp->sonraki_ptr != nullptr)
 		{
@@ -65,7 +65,7 @@ public:
 			}
 			else
 			{
-				temp = temp->sonraki_ptr; // Sadece silme işlemi yapılmadığında ilerle
+				temp = temp->sonraki_ptr; // Sadece silme iÅŸlemi yapÄ±lmadÄ±ÄŸÄ±nda ilerle
 			}
 		}
 	}
