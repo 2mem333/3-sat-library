@@ -1,3 +1,5 @@
+//https://ceng2.ktu.edu.tr/~cakir/veri_yapilari.html teşekkürler
+
 class _veriler {
 public:
 	int deger;
