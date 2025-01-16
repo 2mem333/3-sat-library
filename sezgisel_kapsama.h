@@ -1,5 +1,5 @@
 #include <iostream>
-#include "efe_veri_yapisi.h"
+#include "veri_yapisi.h"
 
 struct mutlakparantez {
 	int degisken;
@@ -96,14 +96,14 @@ public:
 	}
 	int cozum_kontrol() //hata varsa 1 yoksa 0,  deneme_cozum'u kontrol eder
 	{
-		int toplam; //toplam en az 1 olmalý.
+		int toplam; //toplam en az 1 olmalÃ½.
 
 		for (int a = 0; a < parantez_sayisi; a++)
 		{
 			toplam = 0;
 			for (int i = 0; i < degisken_sayisi; i++)
 			{
-				if (matris[i][a] == 1) //1 ise çözümün kendisini degilse tam tersini al
+				if (matris[i][a] == 1) //1 ise Ã§Ã¶zÃ¼mÃ¼n kendisini degilse tam tersini al
 				{
 					toplam += cozum[i];
 				}
@@ -210,7 +210,7 @@ public:
 		}
 		return agr;
 	}
-	void parantezleri_bul() //en az agir parantezlerden buluncak harfleri secer,,, hatalý çalýþýyor
+	void parantezleri_bul() //en az agir parantezlerden buluncak harfleri secer,,, hatalÃ½ Ã§alÃ½Ã¾Ã½yor
 	{
 		while (bulunacak_parantezler.buyukluk() != 0)
 		{
@@ -468,25 +468,25 @@ public:
 		std::cout << "\n      ";
 		for (int i = 0; i < parantez_sayisi; i++)
 		{
-			if (silinen_parantezler.iceriyormu(i)) // Eðer parantez silinmiþse, atla
+			if (silinen_parantezler.iceriyormu(i)) // EÃ°er parantez silinmiÃ¾se, atla
 				continue;
-			std::cout << std::setw(4) << i + 1; // Sütun geniþliðini 4 yap
+			std::cout << std::setw(4) << i + 1; // SÃ¼tun geniÃ¾liÃ°ini 4 yap
 		}
 		std::cout << "\n";
 
 		for (int a = 0; a < degisken_sayisi; a++)
 		{
-			if (silinen_degiskenler.iceriyormu(a)) // Eðer deðiþken silinmiþse, atla
+			if (silinen_degiskenler.iceriyormu(a)) // EÃ°er deÃ°iÃ¾ken silinmiÃ¾se, atla
 				continue;
 
-			//std::cout << karsilik_gelen_harf(a)<<"" << a << "    " << std::setw(4); // Deðiþkeni yazdýr ve hizala
-			std::cout << "x" << "" << a << "    " << std::setw(4); // Deðiþkeni yazdýr ve hizala
+			//std::cout << karsilik_gelen_harf(a)<<"" << a << "    " << std::setw(4); // DeÃ°iÃ¾keni yazdÃ½r ve hizala
+			std::cout << "x" << "" << a << "    " << std::setw(4); // DeÃ°iÃ¾keni yazdÃ½r ve hizala
 			for (int i = 0; i < parantez_sayisi; i++)
 			{
-				if (silinen_parantezler.iceriyormu(i)) // Eðer parantez silinmiþse, atla
+				if (silinen_parantezler.iceriyormu(i)) // EÃ°er parantez silinmiÃ¾se, atla
 					continue;
 
-				// Matris deðerine göre çýktýyý yazdýr
+				// Matris deÃ°erine gÃ¶re Ã§Ã½ktÃ½yÃ½ yazdÃ½r
 				if (matris[a][i] == 1)
 					std::cout << std::setw(4) << "1";
 				else if (matris[a][i] == 0)
