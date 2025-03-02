@@ -2,5 +2,5 @@
 mingw32-make
 
 ## Kullanım
-*sat3_solver <cnf dosya yolu>*
+sat3_solver \<cnf-dosya-yolu\>
 
